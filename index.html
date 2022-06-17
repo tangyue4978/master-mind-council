@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Master Mind Council</title>
+
+	<link rel="stylesheet" href="./assets/reset/reset.css">
+	<link rel="stylesheet" href="./css/index.css">
+	<script src="./assets/rem/rem.js"></script>
+</head>
+<body>
+	<div class="container" v-cloak>
+		<div class="header">
+			<img class="logo" src="./images/index/logo.png" alt="Master Mind Council">
+
+			<div class="lang_box" @click="toShowLangDialog">
+				<img src="./images/index/lang_change_bg.png" alt="">
+				<span>{{ langList[currentLang].abbr }}</span>
+			</div>
+		</div>
+
+		<div class="banner_box">
+
+		</div>
+
+		<div class="active_box">
+			<h3>富债为王</h3>
+			<h3>全新3小时速成班</h3>
+			<span>Wednesday, 3 June 2021 | 8.00am</span>
+			<div class="btn" @click="toJoinPage">Join</div>
+			<div class="btn back_btn">Back</div>
+			<img class="share_img" src="./images/index/icon_share.png" alt="share" @click="toShare">
+		</div>
+
+		<div class="description_box">
+			<div class="description_header">
+				<div class="line"></div>
+				<span>Description</span>
+			</div>
+
+			<div class="description_body">
+				<p>看过了上 2 个礼拜的 Business Presentation,一起来期待这个星期另外 8 位企业家的呈现，一起在 MMC 每个星期的聚会里一起学习，一起成长！</p>
+			</div>
+		</div>
+
+		<template v-if="isShowLangDialog">
+			<div class="lang_dialog_box">
+				<div class="lang_dialog">
+					<img class="dialog_close" src="./images/index/icon_close.png" alt="close" @click="isShowLangDialog = false">
+
+					<div class="dialog_header">
+						<h3>Choose Language</h3>
+					</div>
+
+					<div class="dialog_content">
+						<div class="search_input_box">
+							<img src="./images/index/icon_search.png" alt="search">
+							<input type="text" placeholder="Language">
+						</div>
+
+						<div class="all_lang_box">
+							<template v-for="(item, index) in langList">
+								<div :key="index" class="lang_item" @click="toChooseLang(item, index)">
+									<span>{{ item.name }}</span>
+									<template v-if="currentLang === index">
+										<img src="./images/index/icon_right.png" alt="choose">
+									</template>
+								</div>
+							</template>
+						</div>
+					</div>
+				</div>
+			</div>
+		</template>
+	</div>
+
+	<script src="./assets/vue/vue.min.js"></script>
+	<script src="./assets/vue/axios.min.js"></script>
+	<script src="./utils/request.js"></script>
+	<script src="./js/index.js"></script>
+</body>
+</html>

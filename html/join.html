@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport"
+				content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<title>Master Mind Council</title>
+
+	<link rel="stylesheet" href="../assets/reset/reset.css">
+	<link rel="stylesheet" href="../assets/intlTelInput/css/intlTelInput.css">
+	<link rel="stylesheet" href="../css/join.css">
+	<script src="../assets/rem/rem.js"></script>
+</head>
+<body>
+<div class="container" v-cloak>
+	<div class="banner_box">
+
+	</div>
+
+	<h3 class="title_box">欢迎您来到MMC</h3>
+
+	<div class="register_box">
+		<label class="phone_text">手机号</label>
+
+		<div class="phone_box">
+			<input id="phone" class="tel_input" type="tel">
+			<div class="send_message">
+				<span>Send</span>
+			</div>
+		</div>
+
+		<input class="password_input" type="text" placeholder="Verification Code">
+
+		<p class="referral_code">推荐码：G74FLE2B</p>
+
+		<label class="check_box">
+			<input type="checkbox">
+			<span>我已阅读并同意MMC的</span>
+			<span class="serve_clause">服务条款</span>
+		</label>
+
+		<div class="btn">
+			<span @click="toRegister">注册</span>
+		</div>
+	</div>
+</div>
+
+<script src="../assets/vue/vue.min.js"></script>
+<script src="../assets/vue/axios.min.js"></script>
+<script src="../assets/jquery/jquery-3.6.0.min.js"></script>
+<script src="../assets/intlTelInput/js/intlTelInput.min.js"></script>
+<script src="../utils/request.js"></script>
+<script src="../js/join.js"></script>
+</body>
+</html>
