@@ -12,6 +12,12 @@ const app = new Vue({
   },
 
   methods: {
+    toDownloadByApple() {
+      console.log('download by apple')
+    },
 
+    toDownloadByGoogle() {
+      console.log('download by google')
+    }
   }
 })

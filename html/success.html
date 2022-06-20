@@ -13,7 +13,13 @@
 </head>
 <body>
 <div class="container" v-cloak>
-	<span>注册成功</span>
+	<img class="icon_success" src="../images/success/success.png" alt="success">
+
+	<h3>注册成功</h3>
+	<p>您已注册，可下载APP了解更多！</p>
+
+	<img class="icon_apple" src="../images/success/app_store.png" @click="toDownloadByApple" alt="app_store">
+	<img class="icon_google" src="../images/success/google_play.png" @click="toDownloadByGoogle" alt="google_play">
 </div>
 
 <script src="../assets/vue/vue.min.js"></script>
